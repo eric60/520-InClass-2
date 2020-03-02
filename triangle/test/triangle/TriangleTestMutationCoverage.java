@@ -23,14 +23,14 @@ public class TriangleTestMutationCoverage {
         assertEquals(actual, expected);
     }
 
-    @Test 
+    @Test
     public void testScalene() {
         Type actual = Triangle.classify(10, 9, 8);
         Type expected = SCALENE;
         assertEquals(actual, expected);
     }
 
-    @Test 
+    @Test
     public void testIsosceles1() {
         Type actual1 = Triangle.classify(10, 10, 8);
         Type expected1 = ISOSCELES;
@@ -51,7 +51,7 @@ public class TriangleTestMutationCoverage {
         assertEquals(actual3, expected3);
     }
 
-    @Test 
+    @Test
     public void testInvalidNegative1() {
         Type actual1 = Triangle.classify(-2, 8, 8);
         Type expected1 = INVALID;
@@ -76,13 +76,14 @@ public class TriangleTestMutationCoverage {
         Type expected4 = INVALID;
         assertEquals(expected4, actual4);
     }
+
     @Test
     public void testInvalidNegative5() {
         Type actual5 = Triangle.classify(-2, -2, -2);
         Type expected5 = INVALID;
         assertEquals(expected5, actual5);
     }
-    
+
     @Test
     public void testInvalidZero1() {
     	Type actual1 = Triangle.classify(0, 2, 2);
@@ -103,7 +104,7 @@ public class TriangleTestMutationCoverage {
         Type expected3 = INVALID;
         assertEquals(expected3, actual3);
     }
-    
+
     @Test
     public void testValidTriangles1() {
     	Type actual1 = Triangle.classify(1, 2, 2);
@@ -125,7 +126,7 @@ public class TriangleTestMutationCoverage {
         assertEquals(expected3, actual3);
     }
 
-    @Test 
+    @Test
     public void testInvalidLengths1() {
         Type actual1 = Triangle.classify(1, 2, 3);
         Type expected1 = INVALID;
@@ -145,34 +146,68 @@ public class TriangleTestMutationCoverage {
         Type expected3 = INVALID;
         assertEquals(actual3, expected3);
     }
+
     @Test
     public void testInvalidLengths4() {
         Type actual4 = Triangle.classify(Integer.MAX_VALUE, Integer.MAX_VALUE, 1);
         Type expected4 = INVALID;
         assertEquals(actual4, expected4);
     }
+
     @Test
     public void testInvalidLengths5() {
         Type actual5 = Triangle.classify(Integer.MAX_VALUE, 1, Integer.MAX_VALUE);
         Type expected5 = INVALID;
         assertEquals(actual5, expected5);
     }
+
     @Test
     public void testInvalidLengths6() {
         Type actual6 = Triangle.classify(1, Integer.MAX_VALUE, Integer.MAX_VALUE);
         Type expected6 = INVALID;
         assertEquals(actual6, expected6);
     }
+
     @Test
     public void testInvalidLengths7() {
         Type actual7 = Triangle.classify(1, 2, 4);
         Type expected7 = INVALID;
         assertEquals(actual7, expected7);
     }
+
     @Test
     public void testInvalidLengths8() {
         Type actual8 = Triangle.classify(1, 3, 2);
         Type expected8 = INVALID;
         assertEquals(actual8, expected8);
     }
+
+    @Test
+    public void testMutationLine34Mutation63() {
+        Type actual = Triangle.classify(2, 10, 13);
+        Type expected = INVALID;
+        assertEquals(actual, expected);
+    }
+
+    @Test
+    public void testMutationLine34Mutation81() {
+        Type actual = Triangle.classify(12, 2, 10);
+        Type expected = INVALID;
+        assertEquals(actual, expected);
+    }
+
+    @Test
+    public void testMutationLine34Mutation70() {
+        Type actual = Triangle.classify(2, 13, 10);
+        Type expected = INVALID;
+        assertEquals(actual, expected);
+    }
+
+    @Test
+    public void testMutation148() {
+        Type actual = Triangle.classify(5, 2, 2);
+        Type expected = INVALID;
+        assertEquals(actual, expected);
+    }
+
 }
